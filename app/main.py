@@ -18,4 +18,5 @@ def get_application():
 
 application = get_application()
 
-uvicorn.run("main:application", debug=True, reload=True, port=55832)
+if __name__ == "__main__":
+    uvicorn.run("main:application", host="127.0.0.1", port=5000, log_level="info")
