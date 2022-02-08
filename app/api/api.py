@@ -4,5 +4,5 @@ from .v1.api import router
 api_router = APIRouter()
 
 
-router.include_router(router,prefix="/v1")
+api_router.include_router(router,prefix="/v1")
 

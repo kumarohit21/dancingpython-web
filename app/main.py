@@ -10,12 +10,12 @@ def get_application():
         title = "Employee-APP",
         version="0.0.1-SNAPSHOT",
         openapi_tags=tag_dict,
-        docs_url="empapp/docs",
-        openapi_url="empapp/openapi.json"
+        docs_url="/empapp/docs",
+        openapi_url="/empapp/openapi.json"
     )
-    application.include_router(api_router, prefix="empapp")
+    application.include_router(api_router, prefix="/empapp")
     return application
 
 application = get_application()
 
-uvicorn.run("main:app", debug=True, reload=True)
+uvicorn.run("main:application", debug=True, reload=True, port=55832)
